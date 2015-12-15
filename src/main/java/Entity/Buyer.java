@@ -21,13 +21,12 @@ public class Buyer extends Thread{
             synchronized (this){
                 try{
                     shop.generateAnimal();
-                    shop.generateBuyer();
                     this.wait();
                 } catch (InterruptedException e){
                     System.out.println("Incorrect data!");
                 }
             }
-            //return;
+            return;
         }
             int currentAnimal = rand.nextInt(shop.getContent().size());
             Animal animal = shop.getContent().get(currentAnimal);

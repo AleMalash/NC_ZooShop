@@ -49,10 +49,18 @@ public class Main {
         Animal cat = new Animal("1", "Steve", "", "5000", "Cat");
         cat.start();
         cat.generate();
-        //Animal chicken = new Animal("2", "Poopey", "", "2500", "Chicken");
-        //Animal mole = new Animal("3", "Semen", "","15000", "Mole");
-        //Animal snack = new Animal("4", "Kaa", "", "12500", "Snack");
-        //Animal hamster = new Animal("5", "Boris", "", "3000", "Hamster");
+        Animal chicken = new Animal("2", "Poopey", "", "2500", "Chicken");
+        chicken.start();
+        chicken.generate();
+        Animal mole = new Animal("3", "Semen", "","15000", "Mole");
+        mole.start();
+        mole.generate();
+        Animal snack = new Animal("4", "Kaa", "", "12500", "Snack");
+        snack.start();
+        snack.generate();
+        Animal hamster = new Animal("5", "Boris", "", "3000", "Hamster");
+        hamster.start();
+        hamster.generate();
 
         List<Animal> container = new ArrayList<Animal>();
 
@@ -60,17 +68,21 @@ public class Main {
 
         dog.addElement(m);
         cat.addElement(m);
+        chicken.addElement(m);
+        mole.addElement(m);
+        snack.addElement(m);
+        hamster.addElement(m);
 
         List<Animal> emptyList = new ArrayList<Animal>();
         List<Buyer> b = new ArrayList<Buyer>();
 
         Buyer alexander = new Buyer("Alexander", emptyList);
         Buyer zhenya = new Buyer("Zhenya", emptyList);
-        //Buyer dima = new Buyer("Dima", emptyList);
+        Buyer dima = new Buyer("Dima", emptyList);
 
         b.add(alexander);
         b.add(zhenya);
-        //b.add(dima);
+        b.add(dima);
 
         for (Buyer buyer: b){
             buyer.start();
