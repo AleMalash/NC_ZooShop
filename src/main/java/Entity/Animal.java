@@ -49,28 +49,8 @@ public class Animal extends Thread{
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getSerialId() {
-        return serialId;
-    }
-
-    public void setSerialId(String serialId) {
-        this.serialId = serialId;
-    }
-
     public String getAnimal() {
         return animal;
-    }
-
-    public void setAnimal(String name) {
-        this.animal = name;
-    }
-
-    public String getOwner() {
-        return owner;
     }
 
     public void setOwner(String owner) {
@@ -79,10 +59,6 @@ public class Animal extends Thread{
 
     public String getHandling_time() {
         return handling_time;
-    }
-
-    public void setHandling_time(String handling_time) {
-        this.handling_time = handling_time;
     }
 
     private void createXML(){
@@ -94,7 +70,7 @@ public class Animal extends Thread{
         try {
             XMLOutputter outputter = new XMLOutputter();
             outputter.setFormat(Format.getPrettyFormat());
-            FileWriter fw = new FileWriter("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\animal" + serialId + ".xml");
+            FileWriter fw = new FileWriter("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\XML\\animal" + serialId + ".xml");
             outputter.output(myDocument, fw);
             fw.close();
         } catch (java.io.IOException e) {
@@ -115,7 +91,7 @@ public class Animal extends Thread{
     private void check(){
         try
         {
-            File xmlFile = new File("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\animal"+ serialId +".xml");
+            File xmlFile = new File("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\XML\\animal"+ serialId +".xml");
             File xsdFile = new File("classes.xsd");
             SAXBuilder builder = new SAXBuilder();
             builder.setFeature(

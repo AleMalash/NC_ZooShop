@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by Alexander on 15.12.2015.
  */
-public class Shop {
+public class Shop{
     public static int getSize() {
         return size;
     }

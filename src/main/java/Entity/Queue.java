@@ -1,8 +1,6 @@
 package Entity;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by Alexander on 15.12.2015.

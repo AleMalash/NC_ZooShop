@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.Timer;
 
 /**
  * Created by Alexander on 14.12.2015.
@@ -26,7 +25,7 @@ public class Main {
         Properties properties = new Properties();
 
         try{
-            input = new FileInputStream("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\additions.properties");
+            input = new FileInputStream("C:\\Users\\Alexander\\IdeaProjects\\Zoo\\src\\main\\resources\\properties\\additions.properties");
             properties.load(input);
 
             N = Integer.parseInt(properties.getProperty("N"));
@@ -94,32 +93,5 @@ public class Main {
                 buyer.buyAnimal(m);
             }
         }
-
-
-
-//        zhenya.buyAnimal(m);
-//        dima.buyAnimal(m);
-
-//        Buyer kate = new Buyer("Kate", emptyList);
-//
-//        b.add(alexander);
-//        b.add(zhenya);
-//        b.add(dima);
-//        b.add(kate);
-//
-//        Queue buyers = new Queue(b, N);
-//
-//        for (Buyer buyer : buyers.getBuyers()){
-//            buyer.start();
-//        }
-//        buyers.addBuyer(new Buyer("Joe", emptyList));
-//
-//        for (Buyer buyer : buyers.getBuyers()){
-//            m.buyAnimal(buyer);
-//        }
-//        Animal chicken = new Animal("2", "Poopey", "", "2500", "Chicken");
-//        chicken.start();
-//
-//        m.addElement(chicken);
     }
 }
